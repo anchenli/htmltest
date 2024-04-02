@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Load file or HTML string example</title>
+</head>
+<body onload="console.log('Logging that the page is loading.')">
+
+<h1>msg test</h1>
+
+
+
+<style>
+    .btn-group button {
+      padding: 24px; 24px;
+      display: block;
+      width: 25%;
+      margin: 5px 0px 0px 0px;
+      font-size: 48px;
+    }
+    a {
+      font-size: 48px;
+    }
+</style>
+
+<ul>
+  <ul><a href="yzt://login">yzt://login</a></ul>
+  </ul>
+<div class="btn-group">
+    <button onclick="runCustomJavaScript()">js method</button>
+</div>
+
+<script>
+  function runCustomJavaScript() {
+    // 发送消息到 Toaster
+    yzt_msg_channel.postMessage("yzt://login");
+  }
+</script>
+
+</body>
+</html>
